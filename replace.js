@@ -10,8 +10,8 @@ const filePath = path.resolve(__dirname, `./${args[0]}`);
 const transform = file => {
   const transform = file.toString()
     .replace(/wx:/g, 'v-')
-    .replace(/v-elif/g, 'v-else-if')
-    .replace(/v-key/g, ':key')
+    .replace(/wx:elif/g, 'v-else-if')
+    .replace(/wx:key/g, ':key')
     .replace(/\s*data-/g, ' :data-')
 
     .replace(/<view/g, '<div')
